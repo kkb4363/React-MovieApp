@@ -1,14 +1,21 @@
-import styled from './App.module.css';
-import Button from './Button';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Home from './routes/Home';
+import Detail from './routes/Detail';
 
-function App() {
+function App({id}){
   return (
-    <div>
-      <h1 className={styled.title}>Welcome</h1>
-      <Button text="클릭"></Button>
-
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+      <Route path='/Detail/:id' element={<Detail/>}/>
+      
+    </Routes>
+    </BrowserRouter>
   );
+  
 }
-
 export default App;
