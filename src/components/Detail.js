@@ -16,16 +16,16 @@ function Detail(){
     );
 
     return (
-        <div key={id}>
+    <div className='detail'>
+        <div className='detail_image'>
         <img src={details.medium_cover_image} alt={details.title}/>
-        <h1>{details.title}</h1>
-        <h3>Rating = {details.rating}</h3>
-        <h4>like_count = {details.like_count}</h4>
-        <a href={details.url}>{details.title}'s URL</a>
-        
-        
+        </div>    
+        <div className='detail_text'>
+            <a href={details.url}><h1>{details.title} 보러가기</h1></a>
+            <p>{details.description_full}</p>
+            <h3>평점 = {details.rating}</h3>
         </div>
-
+    </div>
     );
 }
 export default Detail;
