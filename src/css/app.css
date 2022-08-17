@@ -1,0 +1,56 @@
+body{
+    background-color: #ebeef3;
+}
+
+.movie-display{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.movie{
+    width: 500px;
+    height: 350px;
+    background-color: white;
+    margin:30px 30px;
+    display:flex;
+    flex-direction: column;
+    position:relative;
+}
+
+.movie img{
+    position:absolute;
+    height: 200px;
+    width: 150px;
+    margin-left:-20px;
+    margin-top:-20px;
+}
+
+.movie h2,
+.movie p,
+.movie ul{
+    margin-left:150px;
+}
+
+.movie h2{
+    display:flex;
+    margin-left:150px;
+    margin-top:10px;
+    font-size: 27px;
+}
+
+.movie p{
+    margin-bottom:20px;
+}
+
+.ulstyle{
+    width:300px;
+    height: 200px;
+    display:flex;
+    flex-direction: column;
+}
+
+.ulstyle li{
+    font-size:14px;
+    margin-left:-20px;
+}
+

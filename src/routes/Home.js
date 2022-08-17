@@ -1,6 +1,5 @@
 import {useState, useEffect} from 'react';
 import Movie from '../components/Movie';
-import Detail from '../components/Detail';
 
     function Home(){
         const [loading,setloading] = useState(true);
@@ -19,7 +18,7 @@ import Detail from '../components/Detail';
           <div>
 
             {loading ? (<h1>Loading...</h1>) : 
-            (<div> 
+            (<div className='movie-display'> 
               {movies.map((mov)=> <Movie 
               cover_image = {mov.medium_cover_image} 
               title = {mov.title}
