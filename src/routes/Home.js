@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';
 import Movie from '../components/Movie';
-import Detail from '../routes/Detail';
+import Detail from '../components/Detail';
 
     function Home(){
         const [loading,setloading] = useState(true);
@@ -11,22 +11,24 @@ import Detail from '../routes/Detail';
           .then((json)=> {
             setmovies(json.data.movies);
             setloading(false);
+            console.log(json.data.movies);
           })
       },[]);
       
         return (
           <div>
 
-            {loading ? (<h1>Loading...</h1>) : (<div> {movies.map((movies)=> <Movie 
-              cover_image = {movies.medium_cover_image} 
-              title = {movies.title}
-              id = {movies.id}
-              summary = {movies.summary}
-              genres = {movies.genres}
-              url = {movies.url}
+            {loading ? (<h1>Loading...</h1>) : 
+            (<div> 
+              {movies.map((mov)=> <Movie 
+              cover_image = {mov.medium_cover_image} 
+              title = {mov.title}
+              id = {mov.id}
+              summary = {mov.summary}
+              genres = {mov.genres}
              />
             )}
-                
+             
             </div>
             ) 
             }
