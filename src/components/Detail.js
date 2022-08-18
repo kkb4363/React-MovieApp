@@ -21,7 +21,7 @@ function Detail(){
         <img src={details.medium_cover_image} alt={details.title}/>
         </div>    
         <div className='detail_text'>
-            <a href={details.url}><h1>{details.title} 보러가기</h1></a>
+            <a className='text' href={details.url}><h1>{details.title} 보러가기</h1></a>
             <p>{details.description_full}</p>
             <h3>평점 = {details.rating}</h3>
         </div>
